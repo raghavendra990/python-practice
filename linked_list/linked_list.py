@@ -21,6 +21,13 @@ class LinkedList:
 			print temp.data
 			temp = temp.next
 
+	#push the value at the first loaction
+	def push(self, new_data):
+		temp = Node(new_data)
+		temp.next = self.head
+		self.head = temp
+
+
 #code execution start here
 
 if __name__ =='__main__':
@@ -45,6 +52,8 @@ if __name__ =='__main__':
 	"Now `next of the first is refrence to the the second, same we have to do for second and third"
 
 	second.next = third
+
+	llist.push(7)
 
 	llist.PrintList() # will print he list 
 
