@@ -95,6 +95,16 @@ class LinkedList:
 		# change the next of last node
 		last.next  = new_node
 
+	# get count of linklist
+	def getCount(self):
+		temp  = self.head
+		count = 0
+
+		while(temp):
+			count +=1
+			temp = temp.next
+
+		return count
 
 
 #code execution start here
@@ -131,3 +141,4 @@ if __name__ =='__main__':
 	llist.deleteNode(48)
 	llist.PrintList() # will print he list 
 
+	print "length of the linklist:", llist.getCount()
